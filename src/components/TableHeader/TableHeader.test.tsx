@@ -5,7 +5,7 @@ test("renders table headers", () => {
   render(
     <table>
       <TableHeader headers={["Name", "Age"]} />
-    </table>
+    </table>,
   );
 
   expect(screen.getByText("Name")).toBeInTheDocument();

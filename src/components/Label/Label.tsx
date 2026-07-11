@@ -7,13 +7,6 @@ const StyledLabel = styled.label<{ disabled?: boolean }>`
   font-size: 18px;
 `;
 
-export const Label: React.FC<LabelProps> = ({
-  text,
-  disabled = false,
-}) => {
-  return (
-    <StyledLabel disabled={disabled}>
-      {text}
-    </StyledLabel>
-  );
+export const Label: React.FC<LabelProps> = ({ text, disabled = false }) => {
+  return <StyledLabel disabled={disabled}>{text}</StyledLabel>;
 };

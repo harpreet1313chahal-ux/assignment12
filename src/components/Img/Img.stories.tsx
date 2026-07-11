@@ -8,10 +8,7 @@ const meta = {
 export default meta;
 
 export const Default = () => (
-  <Img
-    src="https://via.placeholder.com/200"
-    alt="Placeholder"
-  />
+  <Img src="https://via.placeholder.com/200" alt="Placeholder" />
 );
 
 export const Small = () => (

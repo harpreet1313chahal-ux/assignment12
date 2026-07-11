@@ -1,17 +1,20 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { TableRow } from "./TableRow";
 
-const meta: Meta<typeof TableRow> = {
+const meta = {
   title: "Components/TableRow",
   component: TableRow,
 };
 
 export default meta;
 
-type Story = StoryObj<typeof TableRow>;
-
-export const Default: Story = {
+export const Default = {
   args: {
-    row: ["John", "25", "Winnipeg"],
+    row: ["John", "25", "Canada"],
+  },
+};
+
+export const Disabled = {
+  args: {
+    row: ["Disabled", "--", "--"],
   },
 };

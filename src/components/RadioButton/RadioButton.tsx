@@ -8,12 +8,7 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
 }) => {
   return (
     <label>
-      <input
-        type="radio"
-        checked={checked}
-        disabled={disabled}
-        readOnly
-      />
+      <input type="radio" checked={checked} disabled={disabled} readOnly />
       {label}
     </label>
   );

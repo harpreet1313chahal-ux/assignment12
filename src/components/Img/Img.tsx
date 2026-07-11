@@ -7,12 +7,5 @@ export const Img: React.FC<ImgProps> = ({
   width = 200,
   height = 200,
 }) => {
-  return (
-    <img
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-    />
-  );
+  return <img src={src} alt={alt} width={width} height={height} />;
 };

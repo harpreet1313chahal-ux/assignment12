@@ -7,15 +7,16 @@ const meta = {
 
 export default meta;
 
-export const Default = () => (
-  <Dropdown
-    options={["Option 1", "Option 2", "Option 3"]}
-  />
-);
+export const Default = {
+  args: {
+    options: ["Option 1", "Option 2", "Option 3"],
+    disabled: false,
+  },
+};
 
-export const Disabled = () => (
-  <Dropdown
-    options={["Option 1", "Option 2", "Option 3"]}
-    disabled
-  />
-);
+export const Disabled = {
+  args: {
+    options: ["Option 1", "Option 2", "Option 3"],
+    disabled: true,
+  },
+};

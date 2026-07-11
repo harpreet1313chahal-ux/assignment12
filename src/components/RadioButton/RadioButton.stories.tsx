@@ -7,15 +7,18 @@ const meta = {
 
 export default meta;
 
-export const Default = () => (
-  <RadioButton label="Radio Option" />
-);
+export const Default = {
+  args: {
+    label: "Radio Option",
+    checked: false,
+    disabled: false,
+  },
+};
 
-export const Checked = () => (
-  <RadioButton label="Radio Option" checked />
-);
-
-export const Disabled = () => (
-  <RadioButton label="Radio Option" disabled />
-);
-export {};
+export const Disabled = {
+  args: {
+    label: "Radio Option",
+    checked: false,
+    disabled: true,
+  },
+};

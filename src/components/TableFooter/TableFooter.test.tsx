@@ -5,10 +5,8 @@ test("renders footer text", () => {
   render(
     <table>
       <TableFooter text="Total Records: 10" />
-    </table>
+    </table>,
   );
 
-  expect(
-    screen.getByText("Total Records: 10")
-  ).toBeInTheDocument();
+  expect(screen.getByText("Total Records: 10")).toBeInTheDocument();
 });

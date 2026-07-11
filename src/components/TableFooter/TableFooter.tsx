@@ -1,10 +1,7 @@
 import React from "react";
 import { TableFooterProps } from "./TableFooter.types";
 
-export const TableFooter = ({
-  text,
-  colSpan = 1,
-}: TableFooterProps) => {
+export const TableFooter = ({ text, colSpan = 1 }: TableFooterProps) => {
   return (
     <tfoot>
       <tr>

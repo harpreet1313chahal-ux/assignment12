@@ -9,13 +9,14 @@ export default meta;
 
 export const Default = {
   args: {
-    text: "My Label",
+    text: "Sample Label",
+    disabled: false,
   },
 };
 
 export const Disabled = {
   args: {
-    text: "Disabled Label",
+    text: "Sample Label",
     disabled: true,
   },
 };

@@ -7,7 +7,7 @@ test("renders hero image title", () => {
       src="https://via.placeholder.com/800x300"
       alt="Hero"
       title="Hero Image"
-    />
+    />,
   );
 
   expect(screen.getByText("Hero Image")).toBeInTheDocument();

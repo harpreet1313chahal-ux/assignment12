@@ -1,11 +1,7 @@
 import React from "react";
 import { HeroImageProps } from "./HeroImage.types";
 
-export const HeroImage: React.FC<HeroImageProps> = ({
-  src,
-  alt,
-  title,
-}) => {
+export const HeroImage: React.FC<HeroImageProps> = ({ src, alt, title }) => {
   return (
     <div>
       <img

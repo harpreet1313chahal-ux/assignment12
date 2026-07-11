@@ -1,7 +1,7 @@
-import { render, screen } from "@testing-library/react";
-import { TableCell } from "./TableCell";
+import { render, screen } from '@testing-library/react';
+import { TableCell } from './TableCell';
 
-test("renders cell value", () => {
+test('renders cell value', () => {
   render(
     <table>
       <tbody>
@@ -9,8 +9,8 @@ test("renders cell value", () => {
           <TableCell value="John" />
         </tr>
       </tbody>
-    </table>
+    </table>,
   );
 
-  expect(screen.getByText("John")).toBeInTheDocument();
+  expect(screen.getByText('John')).toBeInTheDocument();
 });

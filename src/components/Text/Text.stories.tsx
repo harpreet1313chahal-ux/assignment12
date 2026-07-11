@@ -1,4 +1,3 @@
-import React from "react";
 import { Text } from "./Text";
 
 const meta = {
@@ -8,10 +7,16 @@ const meta = {
 
 export default meta;
 
-export const Default = () => (
-  <Text text="Hello World" />
-);
+export const Default = {
+  args: {
+    text: "Sample Text",
+    disabled: false,
+  },
+};
 
-export const Disabled = () => (
-  <Text text="Disabled Text" disabled />
-);
+export const Disabled = {
+  args: {
+    text: "Sample Text",
+    disabled: true,
+  },
+};

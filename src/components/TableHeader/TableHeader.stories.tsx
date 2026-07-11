@@ -1,17 +1,20 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { TableHeader } from "./TableHeader";
 
-const meta: Meta<typeof TableHeader> = {
+const meta = {
   title: "Components/TableHeader",
   component: TableHeader,
 };
 
 export default meta;
 
-type Story = StoryObj<typeof TableHeader>;
-
-export const Default: Story = {
+export const Default = {
   args: {
     headers: ["Name", "Age", "City"],
+  },
+};
+
+export const Disabled = {
+  args: {
+    headers: ["Disabled", "Disabled", "Disabled"],
   },
 };

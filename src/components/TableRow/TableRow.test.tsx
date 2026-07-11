@@ -7,7 +7,7 @@ test("renders row data", () => {
       <tbody>
         <TableRow row={["John", "25"]} />
       </tbody>
-    </table>
+    </table>,
   );
 
   expect(screen.getByText("John")).toBeInTheDocument();

@@ -8,7 +8,5 @@ test("renders label", () => {
 
 test("disabled label is gray", () => {
   render(<Label text="Disabled" disabled />);
-  expect(screen.getByText("Disabled")).toHaveStyle(
-    "color: gray"
-  );
+  expect(screen.getByText("Disabled")).toHaveStyle("color: gray");
 });

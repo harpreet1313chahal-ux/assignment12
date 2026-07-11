@@ -1,17 +1,20 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { TableCell } from "./TableCell";
+import { TableCell } from './TableCell';
 
-const meta: Meta<typeof TableCell> = {
-  title: "Components/TableCell",
+const meta = {
+  title: 'Components/TableCell',
   component: TableCell,
 };
 
 export default meta;
 
-type Story = StoryObj<typeof TableCell>;
-
-export const Default: Story = {
+export const Default = {
   args: {
-    value: "John",
+    value: 'John',
+  },
+};
+
+export const Disabled = {
+  args: {
+    value: 'Disabled Cell',
   },
 };

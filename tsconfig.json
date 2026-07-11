@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -17,9 +13,7 @@
     "module": "esnext",
     "moduleResolution": "node",
 
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
 
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -27,8 +21,5 @@
     "jsx": "react-jsx"
   },
 
-  "include": [
-    "src",
-    ".storybook"
-  ]
+  "include": ["src", ".storybook"]
 }

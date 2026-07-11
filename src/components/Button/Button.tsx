@@ -15,8 +15,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   border: none;
   border-radius: 5px;
 
-  cursor: ${(props) =>
-    props.disabled ? "not-allowed" : "pointer"};
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
 
   @media (max-width: 768px) {
     width: 100%;
@@ -29,10 +28,7 @@ export const Button = ({
   disabled = false,
 }: ButtonProps) => {
   return (
-    <StyledButton
-      backgroundColor={backgroundColor}
-      disabled={disabled}
-    >
+    <StyledButton backgroundColor={backgroundColor} disabled={disabled}>
       {label}
     </StyledButton>
   );

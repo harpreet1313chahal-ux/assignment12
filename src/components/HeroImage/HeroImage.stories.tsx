@@ -16,8 +16,5 @@ export const Default = () => (
 );
 
 export const WithoutTitle = () => (
-  <HeroImage
-    src="https://via.placeholder.com/800x300"
-    alt="Hero"
-  />
+  <HeroImage src="https://via.placeholder.com/800x300" alt="Hero" />
 );

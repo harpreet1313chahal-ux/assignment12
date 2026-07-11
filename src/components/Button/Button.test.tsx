@@ -9,6 +9,5 @@ test("button visible", () => {
 
 test("button disabled color", () => {
   render(<Button label="Submit" disabled />);
-  expect(screen.getByText("Submit"))
-    .toHaveStyle("background-color: #cccccc");
+  expect(screen.getByText("Submit")).toHaveStyle("background-color: #cccccc");
 });
