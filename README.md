@@ -1,4 +1,4 @@
-# Assignment 12 – Web Component Library
+# Assignment 13 – UI Component Library Build Checks
 
 ## Student Name
 
@@ -6,23 +6,19 @@ Harpreet Chahal
 
 ## Project Description
 
-This project is a React Component Library built using React, TypeScript, Storybook, and Styled Components.
+This project extends the UI Component Library from Assignment 12 by adding automated code quality checks using Husky, GitHub Actions, and Docker.
 
-The library includes:
+The project includes:
 
-- Button
-- Label
-- Text
-- Table
-- Table Header
-- Table Row
-- Table Cell
-- Table Footer
-- Dropdown
-- Radio Button
-- Image
-- Hero Image
-- Card
+- React
+- TypeScript
+- Storybook
+- Styled Components
+- Docker
+- Husky
+- ESLint
+- Prettier
+- GitHub Actions
 
 ---
 
@@ -42,42 +38,95 @@ npm run storybook
 
 Storybook will be available at:
 
-```text
+```
 http://localhost:6006
 ```
 
-(or port 6007 if prompted)
-
 ---
 
-## Create Production Build
+## Run Prettier
 
 ```bash
-npm run build
+npm run format
 ```
 
 ---
 
-## Docker Build
+## Run ESLint
 
 ```bash
-docker build -t chahal_harpreet_coding_assignment12 .
+npm run lint
 ```
 
 ---
 
-## Docker Run
+## Run Tests
 
 ```bash
-docker run -p 8083:8083 --name chahal_harpreet_coding_assignment12 chahal_harpreet_coding_assignment12
+npm test -- --watchAll=false
 ```
 
 ---
 
-## Open Application
+## Husky Pre-commit Checks
 
-```text
-http://localhost:8083
+Before every commit, Husky automatically runs:
+
+- Prettier
+- ESLint
+- Tests
+
+If any check fails, the commit is blocked.
+
+---
+
+## GitHub Actions
+
+GitHub Actions automatically runs the following checks for every push and pull request:
+
+- npm install
+- npm run format
+- npm run lint
+- npm test -- --watchAll=false
+
+---
+
+## Build Docker Image
+
+```bash
+docker build -t chahal_harpreet_coding_assignment13 .
+```
+
+---
+
+## Run Docker Container
+
+```bash
+docker run --name chahal_harpreet_coding_assignment13 -p 8018:8018 chahal_harpreet_coding_assignment13
+```
+
+---
+
+## Open the Application
+
+```
+http://localhost:8018
+```
+
+---
+
+## Working Directory
+
+```
+/chahal_harpreet_ui_garden_build_checks
+```
+
+---
+
+## Docker Container Name
+
+```
+chahal_harpreet_coding_assignment13
 ```
 
 ---
@@ -89,3 +138,7 @@ http://localhost:8083
 - Storybook
 - Styled Components
 - Docker
+- Husky
+- ESLint
+- Prettier
+- GitHub Actions
