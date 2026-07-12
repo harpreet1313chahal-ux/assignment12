@@ -1,26 +1,26 @@
-# Use the official Node.js 18 Alpine image as the base image
+# Use the official Node.js 18 Alpine image
 FROM node:18-alpine
 
-# Set the working directory inside the Docker container
-WORKDIR /chahal_harpreet_ui_garden
+# Set the working directory
+WORKDIR /chahal_harpreet_ui_garden_build_checks
 
-# Copy package.json and package-lock.json into the container
+# Copy package files
 COPY package*.json ./
 
-# Install all project dependencies
-RUN npm install
+# Install dependencies
+RUN npm ci
 
-# Copy the rest of the project files into the container
+# Copy project files
 COPY . .
 
-# Create the optimized production build of the React application
+# Build the React application
 RUN npm run build
 
-# Install the 'serve' package globally to serve the production build
+# Install the static file server
 RUN npm install -g serve
 
-# Expose port 8083 so the application can be accessed from outside the container
-EXPOSE 8083
+# Expose port 8018
+EXPOSE 8018
 
-# Start the React production build using the serve package on port 8083
-CMD ["serve", "-s", "build", "-l", "8083"]
+# Serve the production build
+CMD ["serve", "-s", "build", "-l", "8018"]
