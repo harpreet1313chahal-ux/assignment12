@@ -31,7 +31,7 @@ function App() {
 
       <br />
 
-      <h2>harpreet</h2>
+      <h2>harpreet
 
       <h2>Dropdown Component</h2>
       <Dropdown options={["Option 1", "Option 2", "Option 3"]} />
