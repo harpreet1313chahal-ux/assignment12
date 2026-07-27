@@ -1,41 +1,62 @@
 import React from "react";
-import "./App.css";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-import { Button } from "./components/Button/Button";
-import { Card } from "./components/Card/Card";
-import { Dropdown } from "./components/Dropdown/Dropdown";
+import Home from "./pages/Home";
+import Work from "./pages/Work";
+import Skills from "./pages/Skills";
+import Resources from "./pages/Resources";
+import DeveloperSetup from "./pages/DeveloperSetup";
+
+import "./App.css";
 
 function App() {
   return (
-    <div style={{ padding: "40px", fontFamily: "Arial" }}>
-      <h1>Assignment 13 - UI Component Library</h1>
+    <BrowserRouter>
+      <div>
+        <nav
+          style={{
+            background: "#1976d2",
+            padding: "15px",
+            display: "flex",
+            gap: "20px",
+          }}
+        >
+          <Link style={{ color: "white", textDecoration: "none" }} to="/">
+            Home
+          </Link>
 
-      <p>
-        This project demonstrates the reusable UI components created in
-        Assignment 12 with build checks added in Assignment 13.
-      </p>
+          <Link style={{ color: "white", textDecoration: "none" }} to="/work">
+            Work
+          </Link>
 
-      <hr />
+          <Link style={{ color: "white", textDecoration: "none" }} to="/skills">
+            Skills
+          </Link>
 
-      <h2>Button Component</h2>
-      <Button label="Click Me" />
+          <Link
+            style={{ color: "white", textDecoration: "none" }}
+            to="/resources"
+          >
+            Resources
+          </Link>
 
-      <br />
-      <br />
+          <Link
+            style={{ color: "white", textDecoration: "none" }}
+            to="/developer"
+          >
+            Developer Setup
+          </Link>
+        </nav>
 
-      <h2>Card Component</h2>
-      <Card
-        title="Sample Card"
-        description="This is a reusable card component."
-      />
-
-      <br />
-
-      <h2>harpreet
-
-      <h2>Dropdown Component</h2>
-      <Dropdown options={["Option 1", "Option 2", "Option 3"]} />
-    </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/developer" element={<DeveloperSetup />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
